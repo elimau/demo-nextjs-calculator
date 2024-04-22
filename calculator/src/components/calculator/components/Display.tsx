@@ -2,9 +2,10 @@ import classNames from 'classnames'
 
 type Props = {
   children: string
+  testId: string
   style?: string
 }
-const Display = ({ children, style = '' }: Props) => {
+const Display = ({ children, testId, style = '' }: Props) => {
   return (
     <div
       className={classNames(
@@ -20,6 +21,7 @@ const Display = ({ children, style = '' }: Props) => {
         'px-6',
         style,
       )}
+      data-testid={testId}
     >
       {children}
     </div>

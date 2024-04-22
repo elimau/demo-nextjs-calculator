@@ -4,9 +4,9 @@ import { render, screen } from '@testing-library/react'
 import Page from './page'
 
 describe('Page', () => {
-  it('renders a heading', async () => {
-    const { container } = render(<Page />)
-
-    logRoles(container)
+  it('Renders correct heading', async () => {
+    render(<Page />)
+    const heading = screen.getByRole('heading', { level: 1 })
+    expect(heading.textContent).toBe('Calculator')
   })
 })

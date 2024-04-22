@@ -2,8 +2,8 @@ import { logRoles } from '@testing-library/dom'
 import { render, screen } from '@testing-library/react'
 import Page from '../app/z.testpage'
 
-describe('Page', () => {
-  it.skip('renders a heading', async () => {
+describe.skip('TestPage', () => {
+  it('renders a heading', async () => {
     const { container } = render(<Page />)
 
     // DEBUGGING

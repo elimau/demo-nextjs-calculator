@@ -5,7 +5,7 @@ import Display from './components/Display'
 import EqualsButton from './components/EqualsButton'
 import NumberButton from './components/NumberButton'
 import OperatorButton from './components/OperatorButton'
-import { BUTTON } from './constants'
+import { BUTTON, TESTID } from './constants'
 import { calculatorRun } from './utils'
 
 const Calculator = () => {
@@ -19,20 +19,21 @@ const Calculator = () => {
   }
   return (
     <div className={classNames('flex flex-col', 'p-4', 'max-w-xl')}>
-      <Display>{displayValue.toString()}</Display>
+      <Display testId={TESTID.DISPLAY}>{displayValue.toString()}</Display>
       <div
         className={classNames('grid', 'grid-cols-4', 'gap-4', ' grid-rows-4')}
-      >
+        data-testid={TESTID.BUTTONS}
+        >
         <OperatorButton testId={BUTTON._BLANK}>
-          {'\u00A0'}
+          {BUTTON._BLANK}
           {/* {'('} */}
         </OperatorButton>
         <OperatorButton testId={BUTTON._BLANK}>
-          {'\u00A0'}
+          {BUTTON._BLANK}
           {/* {')'} */}
         </OperatorButton>
         <OperatorButton testId={BUTTON._BLANK}>
-          {'\u00A0'}
+          {BUTTON._BLANK}
           {/* {'%'} */}
         </OperatorButton>
         <OperatorButton
@@ -41,7 +42,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.OP_AC)
           }}
         >
-          AC
+          {BUTTON.OP_AC}
         </OperatorButton>
         <NumberButton
           testId={BUTTON.NUM_7}
@@ -49,7 +50,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_7)
           }}
         >
-          7
+          {BUTTON.NUM_7}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_8}
@@ -57,7 +58,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_8)
           }}
         >
-          8
+          {BUTTON.NUM_8}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_9}
@@ -65,7 +66,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_9)
           }}
         >
-          9
+          {BUTTON.NUM_9}
         </NumberButton>
         <OperatorButton
           testId={BUTTON.OP_DIVIDE}
@@ -73,7 +74,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.OP_DIVIDE)
           }}
         >
-          ÷
+          {BUTTON.OP_DIVIDE}
         </OperatorButton>
         <NumberButton
           testId={BUTTON.NUM_4}
@@ -81,7 +82,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_4)
           }}
         >
-          4
+          {BUTTON.NUM_4}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_5}
@@ -89,7 +90,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_5)
           }}
         >
-          5
+          {BUTTON.NUM_5}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_6}
@@ -97,7 +98,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_6)
           }}
         >
-          6
+          {BUTTON.NUM_6}
         </NumberButton>
         <OperatorButton
           testId={BUTTON.OP_MULTIPLY}
@@ -105,7 +106,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.OP_MULTIPLY)
           }}
         >
-          ×
+          {BUTTON.OP_MULTIPLY}
         </OperatorButton>
         <NumberButton
           testId={BUTTON.NUM_1}
@@ -113,7 +114,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_1)
           }}
         >
-          1
+          {BUTTON.NUM_1}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_2}
@@ -121,7 +122,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_2)
           }}
         >
-          2
+          {BUTTON.NUM_2}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_3}
@@ -129,7 +130,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_3)
           }}
         >
-          3
+          {BUTTON.NUM_3}
         </NumberButton>
         <OperatorButton
           testId={BUTTON.OP_MINUS}
@@ -137,7 +138,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.OP_MINUS)
           }}
         >
-          -
+          {BUTTON.OP_MINUS}
         </OperatorButton>
         <NumberButton
           testId={BUTTON.NUM_0}
@@ -145,7 +146,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_0)
           }}
         >
-          0
+          {BUTTON.NUM_0}
         </NumberButton>
         <NumberButton
           testId={BUTTON.NUM_DOT}
@@ -153,7 +154,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.NUM_DOT)
           }}
         >
-          .
+          {BUTTON.NUM_DOT}
         </NumberButton>
         <EqualsButton
           testId={BUTTON.OP_EQUALS}
@@ -161,7 +162,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.OP_EQUALS)
           }}
         >
-          =
+          {BUTTON.OP_EQUALS}
         </EqualsButton>
         <OperatorButton
           testId={BUTTON.OP_PLUS}
@@ -169,7 +170,7 @@ const Calculator = () => {
             handleOnClick(BUTTON.OP_PLUS)
           }}
         >
-          +
+          {BUTTON.OP_PLUS}
         </OperatorButton>
       </div>
     </div>
