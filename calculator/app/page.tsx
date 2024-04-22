@@ -1,10 +1,16 @@
 import Link from 'next/link'
- 
+import Calculator from '@/src/components/calculator'
+
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <Link href="/about">About</Link>
+      <div>
+        <Link href="/about">About</Link>
+      </div>
+      <div>
+        <h1>Calculator</h1>
+        <Calculator />
+      </div>
     </div>
   )
 }
