@@ -11,12 +11,17 @@ export const BUTTON = {
   NUM_8: '8',
   NUM_9: '9',
   NUM_DOT: '.',
-  OP_AC: 'AC',
+  OP_AC: '🖩', // (U+1F5A9)
   OP_DIVIDE: '÷',
   OP_MULTIPLY: '×',
   OP_MINUS: '-',
   OP_PLUS: '+',
   OP_EQUALS: '=',
+}
+
+export const BUTTON_LABEL = {
+  ...BUTTON,
+  OP_AC:'AC'
 }
 
 export const TESTID = {
@@ -52,3 +57,7 @@ export const INTEGER_BUTTONS = [
   BUTTON.NUM_8,
   BUTTON.NUM_9,
 ]
+
+export const DISPLAY_INFINITY = 'Infinity'
+export const DISPLAY_ERROR = 'Error'
+

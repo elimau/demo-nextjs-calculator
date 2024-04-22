@@ -71,4 +71,13 @@ npm install
 npm run dev
 ```
 
-Hit: [http://localhost:3000/](http://localhost:3000/)
+Now, hit: [http://localhost:3000/](http://localhost:3000/)
+
+## How to run tests
+
+Instructions on how to start the application:
+
+```sh
+npm run test
+npm run test:watch
+```
