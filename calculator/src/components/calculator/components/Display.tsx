@@ -11,6 +11,7 @@ const Display = ({ children, style = '' }: Props) => {
         'w-full',
         'rounded',
         'border',
+        'border-gray-600',
         'mb-4',
         'text-right',
         'text-4xl',

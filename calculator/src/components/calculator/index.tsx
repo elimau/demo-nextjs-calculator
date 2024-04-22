@@ -1,3 +1,5 @@
+'use client'
+import { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import Display from './components/Display'
 import EqualsButton from './components/EqualsButton'
@@ -5,16 +7,22 @@ import NumberButton from './components/NumberButton'
 import OperatorButton from './components/OperatorButton'
 
 const Calculator = () => {
+  const [displayValue, setDisplayValue] = useState<number>(0)
   return (
     <div className={classNames('flex flex-col', 'p-4', 'max-w-xl')}>
-      <Display>7</Display>
+      <Display>{displayValue.toString()}</Display>
       <div
         className={classNames('grid', 'grid-cols-4', 'gap-4', ' grid-rows-4')}
       >
-        {/* <div>(</div>
-        <div>)</div>
-        <div>%</div>
-        <div>AC</div> */}
+        {/* 
+        <OperatorButton>(</OperatorButton>
+        <OperatorButton>)</OperatorButton>
+        <OperatorButton>%</OperatorButton> 
+      */}
+        <OperatorButton>{'\u00A0'}</OperatorButton>
+        <OperatorButton>{'\u00A0'}</OperatorButton>
+        <OperatorButton>{'\u00A0'}</OperatorButton>
+        <OperatorButton>AC</OperatorButton>
         <NumberButton>7</NumberButton>
         <NumberButton>8</NumberButton>
         <NumberButton>9</NumberButton>
