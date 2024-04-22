@@ -1,22 +1,17 @@
 import classNames from 'classnames'
-import Button from './Button'
+import Button, { Props } from './Button'
 
-type Props = {
-  children: string
-}
-const EqualsButton = ({ children }: Props) => {
+const EqualsButton = (props: Props) => {
   return (
     <Button
-      data-value={children}
+      {...props}
       style={classNames(
         'bg-blue-300',
         'text-black',
         'font-extrabold',
         'text-3xl',
       )}
-    >
-      {children}
-    </Button>
+    />
   )
 }
 export default EqualsButton

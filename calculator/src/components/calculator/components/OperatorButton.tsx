@@ -1,17 +1,12 @@
 import classNames from 'classnames'
-import Button from './Button'
+import Button, { Props } from './Button'
 
-type Props = {
-  children: string
-}
-const OperatorButton = ({ children }: Props) => {
+const OperatorButton = (props: Props) => {
   return (
     <Button
-      data-value={children}
+      {...props}
       style={classNames('bg-gray-500', 'text-3xl', 'font-normal')}
-    >
-      {children}
-    </Button>
+    />
   )
 }
 export default OperatorButton

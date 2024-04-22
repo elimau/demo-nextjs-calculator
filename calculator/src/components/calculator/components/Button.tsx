@@ -1,10 +1,17 @@
 import classNames from 'classnames'
 
-type Props = {
+export type Props = {
   children: string
+  testId: string
+  onClick?: () => void
   style?: string
 }
-const Button = ({ children, style = '' }: Props) => {
+const Button = ({
+  children,
+  testId,
+  onClick = () => {},
+  style = '',
+}: Props) => {
   return (
     <div
       className={classNames(
@@ -13,8 +20,11 @@ const Button = ({ children, style = '' }: Props) => {
         'rounded',
         'text-center',
         'text-lg',
+        'cursor-default',
         style,
       )}
+      data-testid={testId}
+      onClick={onClick}
     >
       {children}
     </div>

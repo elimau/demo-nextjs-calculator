@@ -1,21 +1,12 @@
 import classNames from 'classnames'
-import Button from './Button'
+import Button, { Props } from './Button'
 
-type Props = {
-  children: string
-}
-const NumberButton = ({ children }: Props) => {
+const NumberButton = (props: Props) => {
   return (
     <Button
-      data-value={children}
-      style={classNames(
-        'bg-gray-800',
-        'leading-loose',
-        'text-lg',
-      )}
-    >
-      {children}
-    </Button>
+      {...props}
+      style={classNames('bg-gray-800', 'leading-loose', 'text-lg')}
+    />
   )
 }
 export default NumberButton
